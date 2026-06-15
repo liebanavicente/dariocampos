@@ -43,7 +43,7 @@ export default function Testimonios() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
         <FadeIn>
-          <div className="flex items-center gap-4 mb-20 md:mb-24">
+          <div className="flex items-center gap-4" style={{ marginBottom: "clamp(3rem, 6vw, 5rem)" }}>
             <span className="w-8 h-px bg-[#D6A85A]" />
             <span className="text-[#D6A85A] text-xs tracking-[0.4em] uppercase">
               Lo que dicen
@@ -51,7 +51,7 @@ export default function Testimonios() {
           </div>
         </FadeIn>
 
-        <div className="grid lg:grid-cols-[1fr_340px] gap-16 lg:gap-24 items-start">
+        <div className="grid lg:grid-cols-[1fr_360px]" style={{ gap: "clamp(3rem, 6vw, 6rem)", alignItems: "start" }}>
 
           {/* Quote */}
           <FadeIn>
@@ -70,15 +70,17 @@ export default function Testimonios() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-                  className="relative z-10 pt-10"
+                  style={{ position: "relative", paddingTop: "clamp(2rem, 4vw, 3rem)" }}
                 >
                   <blockquote
-                    className="text-[#F5F1E8] mb-10 max-w-2xl"
+                    className="text-[#F5F1E8]"
                     style={{
                       fontFamily: "var(--font-playfair)",
                       fontStyle: "italic",
                       fontSize: "clamp(1.2rem,2.5vw,1.65rem)",
-                      lineHeight: 1.5,
+                      lineHeight: 1.6,
+                      maxWidth: "680px",
+                      marginBottom: "clamp(2rem, 4vw, 3.5rem)",
                     }}
                   >
                     {testimonios[active].quote}
@@ -86,10 +88,10 @@ export default function Testimonios() {
                   <div className="flex items-center gap-5">
                     <span className="w-8 h-px bg-[#D6A85A]" />
                     <div>
-                      <div className="text-[#E7E0D2] text-sm font-medium mb-1">
+                      <div className="text-[#E7E0D2] text-sm font-medium" style={{ marginBottom: "0.35rem" }}>
                         {testimonios[active].author}
                       </div>
-                      <div className="text-[#AFA79A] text-xs tracking-widest uppercase">
+                      <div className="text-[#9A907F] text-xs tracking-widest uppercase">
                         {testimonios[active].role}
                       </div>
                     </div>
@@ -101,21 +103,22 @@ export default function Testimonios() {
 
           {/* Selector */}
           <FadeIn direction="right" delay={0.15}>
-            <div className="space-y-0 border-t border-[#1A1714]">
+            <div className="border-t border-[#2A2520]">
               {testimonios.map((t, i) => (
                 <button
                   key={t.id}
                   onClick={() => setActive(i)}
-                  className={`w-full text-left p-6 border-b transition-all duration-300 ${
+                  className={`w-full text-left border-b transition-all duration-300 ${
                     active === i
                       ? "border-[#D6A85A]/30 bg-[#1A1714]/50"
-                      : "border-[#1A1714] hover:bg-[#1A1714]/20"
+                      : "border-[#2A2520] hover:bg-[#1A1714]/20"
                   }`}
+                  style={{ padding: "clamp(1.25rem, 2.5vw, 1.75rem)" }}
                 >
                   <div className="flex items-start gap-4">
                     <span
                       className={`text-xs transition-colors duration-300 mt-1 shrink-0 ${
-                        active === i ? "text-[#D6A85A]" : "text-[#2A2520]"
+                        active === i ? "text-[#D6A85A]" : "text-[#3D3730]"
                       }`}
                       style={{ fontFamily: "var(--font-playfair)" }}
                     >
@@ -123,13 +126,14 @@ export default function Testimonios() {
                     </span>
                     <div className="min-w-0">
                       <div
-                        className={`text-sm font-medium mb-1 transition-colors duration-300 ${
-                          active === i ? "text-[#F5F1E8]" : "text-[#AFA79A]"
+                        className={`text-sm font-medium transition-colors duration-300 ${
+                          active === i ? "text-[#F5F1E8]" : "text-[#C4B89A]"
                         }`}
+                        style={{ marginBottom: "0.35rem" }}
                       >
                         {t.author}
                       </div>
-                      <div className="text-[10px] tracking-widest uppercase text-[#AFA79A]">
+                      <div className="text-[10px] tracking-widest uppercase text-[#9A907F]">
                         {t.role}
                       </div>
                     </div>

@@ -32,12 +32,14 @@ export default function Contact() {
   };
 
   return (
-    <section id="contacto" className="pt-40 md:pt-56 lg:pt-72 pb-32 md:pb-48 lg:pb-60 bg-[#0C0A08] relative overflow-hidden">
+    <section
+      id="contacto"
+      className="bg-[#0C0A08] relative overflow-hidden"
+      style={{ paddingTop: "clamp(6rem, 14vw, 14rem)", paddingBottom: "clamp(4rem, 10vw, 10rem)" }}
+    >
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{
-          background: "radial-gradient(ellipse at 65% 35%, #1A1208 0%, transparent 65%)",
-        }}
+        style={{ background: "radial-gradient(ellipse at 65% 35%, #1A1208 0%, transparent 65%)" }}
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
@@ -49,11 +51,12 @@ export default function Contact() {
           </div>
 
           <h2
-            className="text-[#F5F1E8] max-w-3xl mb-6"
+            className="text-[#F5F1E8] max-w-3xl"
             style={{
               fontFamily: "var(--font-playfair)",
               fontSize: "clamp(2rem,5vw,4rem)",
-              lineHeight: 1.05,
+              lineHeight: 1.1,
+              marginBottom: "clamp(1rem, 2vw, 1.5rem)",
             }}
           >
             Cada proyecto
@@ -61,26 +64,29 @@ export default function Contact() {
           </h2>
         </FadeIn>
 
-        <div className="grid lg:grid-cols-2 gap-20 lg:gap-32 mt-24 md:mt-28">
+        <div
+          className="grid lg:grid-cols-2"
+          style={{ gap: "clamp(3rem, 8vw, 8rem)", marginTop: "clamp(4rem, 8vw, 8rem)" }}
+        >
 
           {/* Contact info */}
           <FadeIn direction="left">
-            <div className="space-y-14">
+            <div style={{ display: "flex", flexDirection: "column", gap: "clamp(2.5rem, 5vw, 4rem)" }}>
               <div>
-                <span className="text-[#D6A85A] text-xs tracking-[0.4em] uppercase block mb-5">
+                <span className="text-[#D6A85A] text-xs tracking-[0.4em] uppercase block" style={{ marginBottom: "1.25rem" }}>
                   Teléfono
                 </span>
                 <a
                   href="tel:+34606524628"
                   className="text-[#F5F1E8] hover:text-[#D6A85A] transition-colors duration-300 block font-light"
-                  style={{ fontFamily: "var(--font-playfair)", fontSize: "1.5rem" }}
+                  style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(1.25rem, 3vw, 1.75rem)" }}
                 >
                   606 524 628
                 </a>
               </div>
 
               <div>
-                <span className="text-[#D6A85A] text-xs tracking-[0.4em] uppercase block mb-5">
+                <span className="text-[#D6A85A] text-xs tracking-[0.4em] uppercase block" style={{ marginBottom: "1.25rem" }}>
                   Instagram
                 </span>
                 <a
@@ -88,27 +94,27 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#F5F1E8] hover:text-[#D6A85A] transition-colors duration-300 block font-light"
-                  style={{ fontFamily: "var(--font-playfair)", fontSize: "1.35rem" }}
+                  style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)" }}
                 >
                   @dariocamposreber
                 </a>
               </div>
 
               <div>
-                <span className="text-[#D6A85A] text-xs tracking-[0.4em] uppercase block mb-5">
+                <span className="text-[#D6A85A] text-xs tracking-[0.4em] uppercase block" style={{ marginBottom: "1.25rem" }}>
                   Ubicación
                 </span>
                 <p
-                  className="text-[#F5F1E8] font-light mb-2"
-                  style={{ fontFamily: "var(--font-playfair)", fontSize: "1.35rem" }}
+                  className="text-[#F5F1E8] font-light"
+                  style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)", marginBottom: "0.5rem" }}
                 >
                   PANORAMA 1526
                 </p>
-                <p className="text-[#BEB7AA] text-sm">Alt Empordà · Catalunya</p>
+                <p className="text-[#9A907F] text-sm">Alt Empordà · Catalunya</p>
               </div>
 
-              <div className="pt-10 border-t border-[#2A2520]">
-                <p className="text-[#BEB7AA] font-light max-w-xs" style={{ lineHeight: 1.85 }}>
+              <div className="border-t border-[#2A2520]" style={{ paddingTop: "clamp(1.5rem, 3vw, 2.5rem)" }}>
+                <p className="text-[#C4B89A] font-light max-w-xs" style={{ lineHeight: 1.95 }}>
                   Para conciertos, grabaciones, producciones, colaboraciones o cualquier
                   consulta profesional. Se responden todos los mensajes.
                 </p>
@@ -120,26 +126,27 @@ export default function Contact() {
           <FadeIn direction="right" delay={0.15}>
             {status === "sent" ? (
               <motion.div
-                className="flex flex-col items-start justify-center h-full py-16"
+                className="flex flex-col items-start justify-center h-full"
+                style={{ paddingTop: "4rem", paddingBottom: "4rem" }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
               >
-                <div className="w-12 h-px bg-[#D6A85A] mb-10" />
+                <div className="w-12 h-px bg-[#D6A85A]" style={{ marginBottom: "2.5rem" }} />
                 <h3
-                  className="text-[#F5F1E8] mb-5"
-                  style={{ fontFamily: "var(--font-playfair)", fontSize: "2rem" }}
+                  className="text-[#F5F1E8]"
+                  style={{ fontFamily: "var(--font-playfair)", fontSize: "2rem", marginBottom: "1.25rem" }}
                 >
                   Mensaje recibido.
                 </h3>
-                <p className="text-[#E7E0D2] font-light" style={{ lineHeight: 1.85 }}>
+                <p className="text-[#C4B89A] font-light" style={{ lineHeight: 1.9 }}>
                   Gracias por escribir. Darío responderá en breve.
                 </p>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-8">
-                <div className="grid md:grid-cols-2 gap-8">
+              <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "clamp(2rem, 4vw, 3rem)" }}>
+                <div className="grid md:grid-cols-2" style={{ gap: "clamp(1.5rem, 3vw, 2.5rem)" }}>
                   <div>
-                    <label className="text-[#BEB7AA] text-xs tracking-widest uppercase block mb-3">
+                    <label className="text-[#9A907F] text-xs tracking-widest uppercase block" style={{ marginBottom: "1rem" }}>
                       Nombre
                     </label>
                     <input
@@ -148,12 +155,13 @@ export default function Contact() {
                       value={form.name}
                       onChange={handleChange}
                       required
-                      className="w-full bg-transparent border-b border-[#2A2520] text-[#F5F1E8] py-4 text-sm outline-none focus:border-[#D6A85A] transition-colors duration-300 placeholder:text-[#3D3730]"
+                      className="w-full bg-transparent border-b border-[#2A2520] text-[#F5F1E8] text-sm outline-none focus:border-[#D6A85A] transition-colors duration-300 placeholder:text-[#3D3730]"
+                      style={{ paddingTop: "1rem", paddingBottom: "1rem" }}
                       placeholder="Tu nombre"
                     />
                   </div>
                   <div>
-                    <label className="text-[#BEB7AA] text-xs tracking-widest uppercase block mb-3">
+                    <label className="text-[#9A907F] text-xs tracking-widest uppercase block" style={{ marginBottom: "1rem" }}>
                       Email
                     </label>
                     <input
@@ -162,21 +170,23 @@ export default function Contact() {
                       value={form.email}
                       onChange={handleChange}
                       required
-                      className="w-full bg-transparent border-b border-[#2A2520] text-[#F5F1E8] py-4 text-sm outline-none focus:border-[#D6A85A] transition-colors duration-300 placeholder:text-[#3D3730]"
+                      className="w-full bg-transparent border-b border-[#2A2520] text-[#F5F1E8] text-sm outline-none focus:border-[#D6A85A] transition-colors duration-300 placeholder:text-[#3D3730]"
+                      style={{ paddingTop: "1rem", paddingBottom: "1rem" }}
                       placeholder="tu@email.com"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-[#BEB7AA] text-xs tracking-widest uppercase block mb-3">
+                  <label className="text-[#9A907F] text-xs tracking-widest uppercase block" style={{ marginBottom: "1rem" }}>
                     Tipo de proyecto
                   </label>
                   <select
                     name="subject"
                     value={form.subject}
                     onChange={handleChange}
-                    className="w-full bg-[#0C0A08] border-b border-[#2A2520] text-[#F5F1E8] py-4 text-sm outline-none focus:border-[#D6A85A] transition-colors duration-300"
+                    className="w-full bg-[#0C0A08] border-b border-[#2A2520] text-[#F5F1E8] text-sm outline-none focus:border-[#D6A85A] transition-colors duration-300"
+                    style={{ paddingTop: "1rem", paddingBottom: "1rem" }}
                   >
                     <option value="" className="bg-[#0C0A08]">Selecciona una opción</option>
                     <option value="concierto" className="bg-[#0C0A08]">Concierto</option>
@@ -190,7 +200,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="text-[#BEB7AA] text-xs tracking-widest uppercase block mb-3">
+                  <label className="text-[#9A907F] text-xs tracking-widest uppercase block" style={{ marginBottom: "1rem" }}>
                     Mensaje
                   </label>
                   <textarea
@@ -199,15 +209,17 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full bg-transparent border-b border-[#2A2520] text-[#F5F1E8] py-4 text-sm outline-none focus:border-[#D6A85A] transition-colors duration-300 resize-none placeholder:text-[#3D3730]"
+                    className="w-full bg-transparent border-b border-[#2A2520] text-[#F5F1E8] text-sm outline-none focus:border-[#D6A85A] transition-colors duration-300 resize-none placeholder:text-[#3D3730]"
+                    style={{ paddingTop: "1rem", paddingBottom: "1rem" }}
                     placeholder="Cuéntame sobre tu proyecto..."
                   />
                 </div>
 
-                <div className="pt-4">
+                <div style={{ paddingTop: "0.5rem" }}>
                   <button
                     type="submit"
-                    className="group w-full py-6 bg-[#D6A85A] text-[#0C0A08] text-xs tracking-[0.35em] uppercase font-semibold hover:bg-[#F0C875] transition-all duration-300 flex items-center justify-center gap-5"
+                    className="group w-full bg-[#D6A85A] text-[#0C0A08] text-xs tracking-[0.35em] uppercase font-semibold hover:bg-[#F0C875] transition-all duration-300 flex items-center justify-center gap-5"
+                    style={{ paddingTop: "1.5rem", paddingBottom: "1.5rem" }}
                   >
                     Enviar mensaje
                     <span className="w-6 h-px bg-[#0C0A08] group-hover:w-10 transition-all duration-300 inline-block" />

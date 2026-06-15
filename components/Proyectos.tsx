@@ -72,20 +72,20 @@ export default function Proyectos() {
             <span className="w-8 h-px bg-[#D6A85A]" />
             <span className="text-[#D6A85A] text-xs tracking-[0.4em] uppercase">Proyectos</span>
           </div>
-          <div className="grid md:grid-cols-2 gap-10 items-end mb-16 md:mb-20">
+          <div className="grid md:grid-cols-2 gap-10 items-end" style={{ marginBottom: "clamp(3rem, 6vw, 6rem)" }}>
             <h2
               className="text-[#F5F1E8]"
               style={{
                 fontFamily: "var(--font-playfair)",
                 fontSize: "clamp(2.5rem,5vw,4.5rem)",
-                lineHeight: 0.95,
+                lineHeight: 1.05,
               }}
             >
               Trabajo
               <br />
               <span className="text-[#D6A85A] italic">y memoria</span>
             </h2>
-            <p className="text-[#E7E0D2] font-light max-w-md" style={{ lineHeight: 1.85 }}>
+            <p className="text-[#C4B89A] font-light max-w-md" style={{ lineHeight: 1.9 }}>
               Cada proyecto es una pregunta que solo puede responderse tocando.
               Un archivo en construcción permanente.
             </p>
@@ -94,15 +94,18 @@ export default function Proyectos() {
 
         {/* Filter tabs */}
         <FadeIn delay={0.1}>
-          <div className="flex flex-wrap gap-3 mb-16 md:mb-20 pb-10 border-b border-[#2A2520]">
+          <div
+            className="flex flex-wrap gap-3 border-b border-[#2A2520]"
+            style={{ marginBottom: "clamp(3rem, 6vw, 5rem)", paddingBottom: "clamp(1.5rem, 3vw, 2.5rem)" }}
+          >
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActive(cat)}
-                className={`text-xs tracking-[0.2em] uppercase px-5 py-2.5 transition-all duration-300 ${
+                className={`text-xs tracking-[0.2em] uppercase px-5 py-3 transition-all duration-300 ${
                   active === cat
                     ? "bg-[#D6A85A] text-[#0C0A08] font-semibold"
-                    : "text-[#BEB7AA] hover:text-[#F5F1E8] border border-[#3D3730] hover:border-[#BEB7AA]"
+                    : "text-[#C4B89A] hover:text-[#F5F1E8] border border-[#3D3730] hover:border-[#C4B89A]"
                 }`}
               >
                 {cat}
@@ -111,8 +114,12 @@ export default function Proyectos() {
           </div>
         </FadeIn>
 
-        {/* Projects grid — max 2 columns, editorial cards */}
-        <motion.div layout className="grid md:grid-cols-2 gap-10 md:gap-14">
+        {/* Projects grid */}
+        <motion.div
+          layout
+          className="grid grid-cols-1 md:grid-cols-2"
+          style={{ gap: "clamp(2.5rem, 5vw, 4.5rem)" }}
+        >
           <AnimatePresence mode="popLayout">
             {filtered.map((project, i) => (
               <motion.div
@@ -122,63 +129,50 @@ export default function Proyectos() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5, delay: i * 0.06 }}
-                className="group bg-[#111009] hover:bg-[#1A1714] transition-colors duration-500 cursor-default overflow-hidden"
+                className="group bg-[#111009] hover:bg-[#1A1714] transition-colors duration-500 cursor-default overflow-hidden border border-[#2A2520] hover:border-[#D6A85A]/20"
               >
-                {/* Image area */}
-                {project.image ? (
-                  <div className="relative aspect-[16/9] overflow-hidden">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#111009]/80 via-transparent to-transparent" />
-                  </div>
-                ) : (
-                  <div className="relative aspect-[16/9] bg-[#1A1714] overflow-hidden">
-                    <div
-                      className="absolute inset-0 opacity-30"
-                      style={{
-                        background:
-                          "radial-gradient(ellipse at 50% 50%, #3D2E1A 0%, transparent 70%)",
-                      }}
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <svg viewBox="0 0 80 80" className="w-12 h-12 opacity-10" fill="none">
-                        <circle cx="40" cy="40" r="35" stroke="#D6A85A" strokeWidth="0.8" />
-                        <circle cx="40" cy="40" r="14" stroke="#D6A85A" strokeWidth="0.8" />
-                        {[0,1,2,3,4,5].map(idx => (
-                          <line key={idx} x1={37+idx*1.2} y1="5" x2={37+idx*1.2} y2="75" stroke="#D6A85A" strokeWidth="0.3" />
-                        ))}
-                      </svg>
-                    </div>
-                  </div>
-                )}
+                {/* Image */}
+                <div className="relative overflow-hidden" style={{ aspectRatio: "16/9" }}>
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#111009]/80 via-transparent to-transparent" />
+                </div>
 
                 {/* Content */}
-                <div className="p-8 md:p-12">
-                  <div className="flex justify-between items-start mb-6">
+                <div style={{ padding: "clamp(1.5rem, 4vw, 3rem)" }}>
+                  <div
+                    className="flex justify-between items-start"
+                    style={{ marginBottom: "clamp(1rem, 2vw, 1.5rem)" }}
+                  >
                     <span className="text-[#D6A85A] text-xs tracking-[0.3em] uppercase">
                       {project.category}
                     </span>
-                    <span className="text-[#AFA79A] text-xs">{project.year}</span>
+                    <span className="text-[#9A907F] text-xs">{project.year}</span>
                   </div>
                   <h3
-                    className="text-[#F5F1E8] mb-5 group-hover:text-[#D6A85A] transition-colors duration-300"
+                    className="text-[#F5F1E8] group-hover:text-[#D6A85A] transition-colors duration-300"
                     style={{
                       fontFamily: "var(--font-playfair)",
-                      fontSize: "clamp(1.4rem,2.5vw,1.75rem)",
+                      fontSize: "clamp(1.3rem,2.5vw,1.75rem)",
+                      lineHeight: 1.2,
+                      marginBottom: "clamp(0.75rem, 2vw, 1.25rem)",
                     }}
                   >
                     {project.title}
                   </h3>
-                  <p className="text-[#BEB7AA] font-light mb-8" style={{ lineHeight: 1.85 }}>
+                  <p
+                    className="text-[#C4B89A] font-light"
+                    style={{ lineHeight: 1.9, marginBottom: "clamp(1.25rem, 3vw, 2rem)" }}
+                  >
                     {project.description}
                   </p>
-                  <div className="pt-5 border-t border-[#2A2520]">
-                    <span className="text-[10px] tracking-[0.2em] uppercase text-[#AFA79A]">
+                  <div className="border-t border-[#2A2520]" style={{ paddingTop: "clamp(1rem, 2vw, 1.5rem)" }}>
+                    <span className="text-[10px] tracking-[0.2em] uppercase text-[#9A907F]">
                       {project.role}
                     </span>
                   </div>

@@ -39,13 +39,14 @@ export default function Hero() {
       </motion.div>
 
       <motion.div
-        className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pb-28 lg:pb-36 w-full"
-        style={{ opacity }}
+        className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full"
+        style={{ opacity, paddingBottom: "clamp(5rem, 10vw, 9rem)" }}
       >
         <div className="max-w-3xl">
           {/* Eyebrow */}
           <motion.div
-            className="flex items-center gap-5 mb-10"
+            className="flex items-center gap-5"
+            style={{ marginBottom: "clamp(2rem, 4vw, 3.5rem)" }}
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
@@ -58,12 +59,13 @@ export default function Hero() {
 
           {/* Title */}
           <motion.h1
-            className="font-serif text-[#F5F1E8] mb-8"
+            className="font-serif text-[#F5F1E8]"
             style={{
               fontFamily: "var(--font-playfair)",
-              fontSize: "clamp(3.2rem,11vw,8.5rem)",
-              lineHeight: 0.93,
+              fontSize: "clamp(2.6rem,9vw,7rem)",
+              lineHeight: 1.0,
               letterSpacing: "-0.02em",
+              marginBottom: "clamp(1.75rem, 4vw, 3rem)",
             }}
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -75,7 +77,12 @@ export default function Hero() {
 
           {/* Subtitle */}
           <motion.p
-            className="text-[#E7E0D2] text-xl md:text-2xl font-light max-w-xl mb-16 leading-loose"
+            className="text-[#E7E0D2] font-light max-w-xl"
+            style={{
+              fontSize: "clamp(1rem, 2.5vw, 1.25rem)",
+              lineHeight: 1.85,
+              marginBottom: "clamp(2.5rem, 6vw, 5rem)",
+            }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.75 }}
@@ -85,7 +92,8 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex flex-wrap gap-5"
+            className="flex flex-wrap"
+            style={{ gap: "clamp(1rem, 2vw, 2rem)" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.95 }}
@@ -113,7 +121,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
         >
-          <span className="text-[#AFA79A] text-[9px] tracking-[0.35em] uppercase rotate-90 mb-3">
+          <span className="text-[#9A907F] text-[9px] tracking-[0.35em] uppercase rotate-90 mb-3">
             Scroll
           </span>
           <motion.div

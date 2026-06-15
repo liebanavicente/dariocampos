@@ -42,20 +42,20 @@ export default function GuitarraFlamenca() {
               Guitarra flamenca
             </span>
           </div>
-          <div className="grid md:grid-cols-2 gap-10 items-end mb-20 md:mb-32">
+          <div className="grid md:grid-cols-2 gap-10 items-end" style={{ marginBottom: "clamp(4rem, 8vw, 8rem)" }}>
             <h2
               className="text-[#F5F1E8]"
               style={{
                 fontFamily: "var(--font-playfair)",
                 fontSize: "clamp(2.5rem,5vw,4.5rem)",
-                lineHeight: 0.95,
+                lineHeight: 1.05,
               }}
             >
               El arte
               <br />
               <span className="text-[#D6A85A] italic">que no envejece</span>
             </h2>
-            <p className="text-[#E7E0D2] font-light max-w-md" style={{ lineHeight: 1.85 }}>
+            <p className="text-[#C4B89A] font-light max-w-md" style={{ lineHeight: 1.9 }}>
               El flamenco no se aprende en los libros. Se aprende escuchando, viéndolo,
               viviéndolo. Y se transmite de la misma manera: de persona a persona,
               de emoción a emoción.
@@ -67,7 +67,7 @@ export default function GuitarraFlamenca() {
 
       {/* Full-width atmospheric image */}
       <FadeIn>
-        <div className="relative h-[65vh] min-h-[400px] overflow-hidden mb-24 md:mb-36">
+        <div className="relative overflow-hidden" style={{ height: "clamp(340px, 65vh, 720px)", marginBottom: "clamp(4rem, 8vw, 8rem)" }}>
           <Image
             src="/images/dario4.jpg"
             alt="Darío Campos — guitarra flamenca al aire libre"
@@ -79,12 +79,12 @@ export default function GuitarraFlamenca() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#0C0A08]/40 to-[#0C0A08]/65" />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center px-6">
-              <p className="text-[#D6A85A] text-xs tracking-[0.5em] uppercase mb-5">
+              <p className="text-[#D6A85A] text-xs tracking-[0.5em] uppercase mb-6">
                 Cante · Baile · Concierto
               </p>
               <p
-                className="text-[clamp(1.1rem,3vw,1.8rem)] text-[#F5F1E8]/85 italic max-w-xl mx-auto"
-                style={{ fontFamily: "var(--font-playfair)", lineHeight: 1.4 }}
+                className="text-[#F5F1E8]/85 italic max-w-xl mx-auto"
+                style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(1.1rem,3vw,1.8rem)", lineHeight: 1.5 }}
               >
                 &ldquo;La guitarra flamenca es el idioma más difícil y más libre del mundo&rdquo;
               </p>
@@ -95,29 +95,41 @@ export default function GuitarraFlamenca() {
 
       {/* Modalidades */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="space-y-5 md:space-y-6">
+        <div className="flex flex-col" style={{ gap: "clamp(1.5rem, 3vw, 2.5rem)" }}>
           {modalidades.map((m, i) => (
             <FadeIn key={m.num} delay={i * 0.07}>
-              <div className="group grid grid-cols-[64px_1fr] md:grid-cols-[96px_1fr] gap-6 md:gap-10 p-8 md:p-10 bg-[#111009] hover:bg-[#14120E] border border-[#2A2520] hover:border-[#D6A85A]/30 transition-all duration-400 cursor-default">
-                <span
-                  className="text-[#3D3730] text-3xl md:text-4xl pt-1 group-hover:text-[#D6A85A]/30 transition-colors duration-300 leading-none"
-                  style={{ fontFamily: "var(--font-playfair)" }}
+              <div
+                className="group bg-[#111009] border border-[#2A2520] hover:border-[#D6A85A]/25 transition-all duration-400 cursor-default"
+                style={{ padding: "clamp(1.75rem, 5vw, 3.5rem)" }}
+              >
+                <div
+                  className="grid"
+                  style={{ gridTemplateColumns: "clamp(56px, 8vw, 96px) 1fr", gap: "clamp(1.25rem, 3vw, 3rem)", alignItems: "start" }}
                 >
-                  {m.num}
-                </span>
-                <div>
-                  <h3
-                    className="text-[#F5F1E8] mb-4 group-hover:text-[#D6A85A] transition-colors duration-300"
-                    style={{
-                      fontFamily: "var(--font-playfair)",
-                      fontSize: "clamp(1.25rem,2vw,1.6rem)",
-                    }}
+                  <span
+                    className="text-[#3D3730] group-hover:text-[#D6A85A]/30 transition-colors duration-300"
+                    style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(1.5rem,4vw,3rem)", lineHeight: 1 }}
                   >
-                    {m.title}
-                  </h3>
-                  <p className="text-[#BEB7AA] font-light max-w-2xl" style={{ lineHeight: 1.9 }}>
-                    {m.description}
-                  </p>
+                    {m.num}
+                  </span>
+                  <div>
+                    <h3
+                      className="text-[#F5F1E8] group-hover:text-[#D6A85A] transition-colors duration-300"
+                      style={{
+                        fontFamily: "var(--font-playfair)",
+                        fontSize: "clamp(1.25rem,2vw,1.6rem)",
+                        marginBottom: "clamp(0.75rem, 2vw, 1.25rem)",
+                      }}
+                    >
+                      {m.title}
+                    </h3>
+                    <p
+                      className="text-[#C4B89A] font-light"
+                      style={{ lineHeight: 1.95, maxWidth: "620px" }}
+                    >
+                      {m.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </FadeIn>

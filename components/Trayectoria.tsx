@@ -59,55 +59,65 @@ export default function Trayectoria() {
               Formación y trayectoria
             </span>
           </div>
-          <div className="grid md:grid-cols-2 gap-10 items-end mb-24 md:mb-36">
+          <div className="grid md:grid-cols-2 gap-10 items-end" style={{ marginBottom: "clamp(4rem, 8vw, 8rem)" }}>
             <h2
               className="text-[#F5F1E8]"
               style={{
                 fontFamily: "var(--font-playfair)",
                 fontSize: "clamp(2.5rem,6vw,5rem)",
-                lineHeight: 0.95,
+                lineHeight: 1.05,
               }}
             >
               Veinte años
               <br />
               <span className="text-[#D6A85A] italic">de camino</span>
             </h2>
-            <p className="text-[#E7E0D2] font-light max-w-md" style={{ lineHeight: 1.85 }}>
+            <p className="text-[#C4B89A] font-light max-w-md" style={{ lineHeight: 1.9 }}>
               Un recorrido que no es lineal sino circular: volver siempre al origen,
               a las raíces, para poder crecer hacia arriba con más firmeza.
             </p>
           </div>
         </FadeIn>
 
-        <div className="space-y-6 md:space-y-8">
+        <div className="flex flex-col" style={{ gap: "clamp(2rem, 4vw, 3.5rem)" }}>
           {milestones.map((m, i) => (
             <FadeIn key={m.period} delay={i * 0.07}>
-              <div className="group grid md:grid-cols-[220px_1fr] gap-6 md:gap-16 p-8 md:p-10 bg-[#111009] hover:bg-[#14120E] border border-[#2A2520] hover:border-[#D6A85A]/30 transition-all duration-500">
-
-                <div className="flex md:flex-col gap-4 md:gap-4 items-start md:pt-1 border-b border-[#2A2520] md:border-b-0 pb-5 md:pb-0">
-                  <span className="text-[#D6A85A] text-xs tracking-[0.35em] uppercase shrink-0">
+              <div
+                className="group bg-[#111009] border border-[#2A2520] hover:border-[#D6A85A]/25 transition-all duration-500"
+                style={{ padding: "clamp(1.75rem, 5vw, 3.5rem)" }}
+              >
+                {/* Period / Year row */}
+                <div
+                  className="flex items-center gap-6 border-b border-[#2A2520]"
+                  style={{ paddingBottom: "clamp(1rem, 2.5vw, 1.5rem)", marginBottom: "clamp(1.25rem, 3vw, 2rem)" }}
+                >
+                  <span className="text-[#D6A85A] text-xs tracking-[0.4em] uppercase shrink-0">
                     {m.period}
                   </span>
-                  <span className="text-[#AFA79A] text-xs tracking-widest uppercase leading-relaxed">
+                  <span className="text-[#9A907F] text-xs tracking-widest uppercase">
                     {m.year}
                   </span>
                 </div>
 
-                <div>
+                {/* Content */}
+                <div className="md:grid md:grid-cols-[1fr_2fr]" style={{ gap: "clamp(1.5rem, 4vw, 4rem)" }}>
                   <h3
-                    className="text-[#F5F1E8] mb-5 group-hover:text-[#D6A85A] transition-colors duration-400"
+                    className="text-[#F5F1E8] group-hover:text-[#D6A85A] transition-colors duration-400 mb-5 md:mb-0"
                     style={{
                       fontFamily: "var(--font-playfair)",
                       fontSize: "clamp(1.3rem,2.5vw,1.75rem)",
+                      lineHeight: 1.2,
                     }}
                   >
                     {m.title}
                   </h3>
-                  <p className="text-[#BEB7AA] font-light max-w-2xl" style={{ lineHeight: 1.9 }}>
+                  <p
+                    className="text-[#C4B89A] font-light"
+                    style={{ lineHeight: 1.95, maxWidth: "620px" }}
+                  >
                     {m.description}
                   </p>
                 </div>
-
               </div>
             </FadeIn>
           ))}
