@@ -112,7 +112,7 @@ export default function Proyectos() {
         </FadeIn>
 
         {/* Projects grid — max 2 columns, editorial cards */}
-        <motion.div layout className="grid md:grid-cols-2 gap-8 md:gap-12">
+        <motion.div layout className="grid md:grid-cols-2 gap-10 md:gap-14">
           <AnimatePresence mode="popLayout">
             {filtered.map((project, i) => (
               <motion.div
@@ -158,8 +158,8 @@ export default function Proyectos() {
                 )}
 
                 {/* Content */}
-                <div className="p-8 md:p-10">
-                  <div className="flex justify-between items-start mb-5">
+                <div className="p-8 md:p-12">
+                  <div className="flex justify-between items-start mb-6">
                     <span className="text-[#D6A85A] text-xs tracking-[0.3em] uppercase">
                       {project.category}
                     </span>

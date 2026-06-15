@@ -17,6 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dariocampos.vercel.app"),
   title: "Darío Campos — Guitarra Flamenca, Producción Musical | PANORAMA 1526",
   description:
     "Guitarrista flamenco, técnico de sonido y productor musical. Más de veinte años dedicados al arte del sonido. Formado en Jerez de la Frontera. Vinculado a PANORAMA 1526.",

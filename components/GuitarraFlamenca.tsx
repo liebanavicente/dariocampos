@@ -42,7 +42,7 @@ export default function GuitarraFlamenca() {
               Guitarra flamenca
             </span>
           </div>
-          <div className="grid md:grid-cols-2 gap-10 items-end mb-20 md:mb-28">
+          <div className="grid md:grid-cols-2 gap-10 items-end mb-20 md:mb-32">
             <h2
               className="text-[#F5F1E8]"
               style={{
@@ -67,7 +67,7 @@ export default function GuitarraFlamenca() {
 
       {/* Full-width atmospheric image */}
       <FadeIn>
-        <div className="relative h-[65vh] min-h-[400px] overflow-hidden mb-24 md:mb-32">
+        <div className="relative h-[65vh] min-h-[400px] overflow-hidden mb-24 md:mb-36">
           <Image
             src="/images/dario4.jpg"
             alt="Darío Campos — guitarra flamenca al aire libre"
@@ -83,7 +83,7 @@ export default function GuitarraFlamenca() {
                 Cante · Baile · Concierto
               </p>
               <p
-                className="text-[clamp(1.1rem,3vw,1.8rem)] text-[#F5F1E8]/80 italic max-w-xl mx-auto"
+                className="text-[clamp(1.1rem,3vw,1.8rem)] text-[#F5F1E8]/85 italic max-w-xl mx-auto"
                 style={{ fontFamily: "var(--font-playfair)", lineHeight: 1.4 }}
               >
                 &ldquo;La guitarra flamenca es el idioma más difícil y más libre del mundo&rdquo;
@@ -95,19 +95,19 @@ export default function GuitarraFlamenca() {
 
       {/* Modalidades */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="space-y-0">
+        <div className="space-y-5 md:space-y-6">
           {modalidades.map((m, i) => (
             <FadeIn key={m.num} delay={i * 0.07}>
-              <div className="group grid grid-cols-[72px_1fr] md:grid-cols-[96px_1fr] gap-8 md:gap-12 items-start py-12 md:py-14 border-b border-[#2A2520] hover:border-[#D6A85A]/25 transition-colors duration-400 cursor-default">
+              <div className="group grid grid-cols-[64px_1fr] md:grid-cols-[96px_1fr] gap-6 md:gap-10 p-8 md:p-10 bg-[#111009] hover:bg-[#14120E] border border-[#2A2520] hover:border-[#D6A85A]/30 transition-all duration-400 cursor-default">
                 <span
-                  className="text-[#3D3730] text-3xl pt-1 group-hover:text-[#D6A85A]/30 transition-colors duration-300"
+                  className="text-[#3D3730] text-3xl md:text-4xl pt-1 group-hover:text-[#D6A85A]/30 transition-colors duration-300 leading-none"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
                   {m.num}
                 </span>
-                <div className="max-w-2xl">
+                <div>
                   <h3
-                    className="text-[#F5F1E8] mb-5 group-hover:text-[#D6A85A] transition-colors duration-300"
+                    className="text-[#F5F1E8] mb-4 group-hover:text-[#D6A85A] transition-colors duration-300"
                     style={{
                       fontFamily: "var(--font-playfair)",
                       fontSize: "clamp(1.25rem,2vw,1.6rem)",
@@ -115,7 +115,7 @@ export default function GuitarraFlamenca() {
                   >
                     {m.title}
                   </h3>
-                  <p className="text-[#BEB7AA] font-light" style={{ lineHeight: 1.85 }}>
+                  <p className="text-[#BEB7AA] font-light max-w-2xl" style={{ lineHeight: 1.9 }}>
                     {m.description}
                   </p>
                 </div>

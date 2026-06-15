@@ -59,7 +59,7 @@ export default function Trayectoria() {
               Formación y trayectoria
             </span>
           </div>
-          <div className="grid md:grid-cols-2 gap-10 items-end mb-24 md:mb-32">
+          <div className="grid md:grid-cols-2 gap-10 items-end mb-24 md:mb-36">
             <h2
               className="text-[#F5F1E8]"
               style={{
@@ -79,12 +79,12 @@ export default function Trayectoria() {
           </div>
         </FadeIn>
 
-        <div className="space-y-0">
+        <div className="space-y-6 md:space-y-8">
           {milestones.map((m, i) => (
             <FadeIn key={m.period} delay={i * 0.07}>
-              <div className="group grid md:grid-cols-[200px_1fr] gap-8 md:gap-16 py-14 md:py-16 border-b border-[#2A2520] hover:border-[#D6A85A]/25 transition-colors duration-500">
+              <div className="group grid md:grid-cols-[220px_1fr] gap-6 md:gap-16 p-8 md:p-10 bg-[#111009] hover:bg-[#14120E] border border-[#2A2520] hover:border-[#D6A85A]/30 transition-all duration-500">
 
-                <div className="flex md:flex-col gap-4 md:gap-3 items-start md:pt-1">
+                <div className="flex md:flex-col gap-4 md:gap-4 items-start md:pt-1 border-b border-[#2A2520] md:border-b-0 pb-5 md:pb-0">
                   <span className="text-[#D6A85A] text-xs tracking-[0.35em] uppercase shrink-0">
                     {m.period}
                   </span>
@@ -93,7 +93,7 @@ export default function Trayectoria() {
                   </span>
                 </div>
 
-                <div className="max-w-2xl">
+                <div>
                   <h3
                     className="text-[#F5F1E8] mb-5 group-hover:text-[#D6A85A] transition-colors duration-400"
                     style={{
@@ -103,7 +103,7 @@ export default function Trayectoria() {
                   >
                     {m.title}
                   </h3>
-                  <p className="text-[#BEB7AA] font-light" style={{ lineHeight: 1.85 }}>
+                  <p className="text-[#BEB7AA] font-light max-w-2xl" style={{ lineHeight: 1.9 }}>
                     {m.description}
                   </p>
                 </div>

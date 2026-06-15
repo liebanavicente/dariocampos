@@ -61,8 +61,8 @@ export default function Hero() {
             className="font-serif text-[#F5F1E8] mb-8"
             style={{
               fontFamily: "var(--font-playfair)",
-              fontSize: "clamp(4.5rem,13vw,10rem)",
-              lineHeight: 0.88,
+              fontSize: "clamp(3.2rem,11vw,8.5rem)",
+              lineHeight: 0.93,
               letterSpacing: "-0.02em",
             }}
             initial={{ opacity: 0, y: 40 }}
@@ -75,7 +75,7 @@ export default function Hero() {
 
           {/* Subtitle */}
           <motion.p
-            className="text-[#E7E0D2] text-xl md:text-2xl font-light max-w-xl mb-14 leading-relaxed"
+            className="text-[#E7E0D2] text-xl md:text-2xl font-light max-w-xl mb-16 leading-loose"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.75 }}
