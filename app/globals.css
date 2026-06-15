@@ -1,26 +1,116 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-obsidian: #0C0A08;
+  --color-charcoal: #1A1714;
+  --color-charcoal-mid: #2A2520;
+  --color-charcoal-light: #3D3730;
+  --color-smoke: #6B6358;
+  --color-ivory: #EDE8DF;
+  --color-ivory-dim: #C4B89A;
+  --color-bronze: #B8864E;
+  --color-bronze-light: #D4A86A;
+  --color-bronze-dim: #8B6030;
+  --color-copper: #A0622A;
+  --color-sand: #C4B89A;
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #3D3730 #0C0A08;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0C0A08;
+}
+::-webkit-scrollbar-thumb {
+  background: #B8864E;
+  border-radius: 2px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0C0A08;
+  color: #EDE8DF;
+  font-family: var(--font-inter), 'Helvetica Neue', Arial, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: rgba(184, 134, 78, 0.3);
+  color: #EDE8DF;
+}
+
+.font-serif {
+  font-family: var(--font-playfair), 'Georgia', serif;
+}
+
+.text-display {
+  font-family: var(--font-playfair), 'Georgia', serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+
+.text-display-bold {
+  font-family: var(--font-playfair), 'Georgia', serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+}
+
+.bronze-line::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background-color: #B8864E;
+  margin-bottom: 1.5rem;
+}
+
+.noise-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.06;
+  z-index: 1;
+}
+
+.gradient-bottom {
+  background: linear-gradient(to bottom, transparent 40%, #0C0A08 100%);
+}
+
+.gradient-top {
+  background: linear-gradient(to top, transparent 40%, #0C0A08 100%);
+}
+
+.img-hover {
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              filter 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.img-hover:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+
+.section-divider {
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, #B8864E, transparent);
+  margin: 0 auto;
 }
