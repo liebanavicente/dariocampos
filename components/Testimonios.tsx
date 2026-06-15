@@ -44,8 +44,8 @@ export default function Testimonios() {
 
         <FadeIn>
           <div className="flex items-center gap-4 mb-20 md:mb-24">
-            <span className="w-8 h-px bg-[#B8864E]" />
-            <span className="text-[#B8864E] text-xs tracking-[0.4em] uppercase">
+            <span className="w-8 h-px bg-[#D6A85A]" />
+            <span className="text-[#D6A85A] text-xs tracking-[0.4em] uppercase">
               Lo que dicen
             </span>
           </div>
@@ -73,7 +73,7 @@ export default function Testimonios() {
                   className="relative z-10 pt-10"
                 >
                   <blockquote
-                    className="text-[#EDE8DF] mb-10 max-w-2xl"
+                    className="text-[#F5F1E8] mb-10 max-w-2xl"
                     style={{
                       fontFamily: "var(--font-playfair)",
                       fontStyle: "italic",
@@ -84,12 +84,12 @@ export default function Testimonios() {
                     {testimonios[active].quote}
                   </blockquote>
                   <div className="flex items-center gap-5">
-                    <span className="w-8 h-px bg-[#B8864E]" />
+                    <span className="w-8 h-px bg-[#D6A85A]" />
                     <div>
-                      <div className="text-[#C4B89A] text-sm font-medium mb-1">
+                      <div className="text-[#E7E0D2] text-sm font-medium mb-1">
                         {testimonios[active].author}
                       </div>
-                      <div className="text-[#6B6358] text-xs tracking-widest uppercase">
+                      <div className="text-[#AFA79A] text-xs tracking-widest uppercase">
                         {testimonios[active].role}
                       </div>
                     </div>
@@ -108,14 +108,14 @@ export default function Testimonios() {
                   onClick={() => setActive(i)}
                   className={`w-full text-left p-6 border-b transition-all duration-300 ${
                     active === i
-                      ? "border-[#B8864E]/30 bg-[#1A1714]/50"
+                      ? "border-[#D6A85A]/30 bg-[#1A1714]/50"
                       : "border-[#1A1714] hover:bg-[#1A1714]/20"
                   }`}
                 >
                   <div className="flex items-start gap-4">
                     <span
                       className={`text-xs transition-colors duration-300 mt-1 shrink-0 ${
-                        active === i ? "text-[#B8864E]" : "text-[#2A2520]"
+                        active === i ? "text-[#D6A85A]" : "text-[#2A2520]"
                       }`}
                       style={{ fontFamily: "var(--font-playfair)" }}
                     >
@@ -124,18 +124,18 @@ export default function Testimonios() {
                     <div className="min-w-0">
                       <div
                         className={`text-sm font-medium mb-1 transition-colors duration-300 ${
-                          active === i ? "text-[#EDE8DF]" : "text-[#6B6358]"
+                          active === i ? "text-[#F5F1E8]" : "text-[#AFA79A]"
                         }`}
                       >
                         {t.author}
                       </div>
-                      <div className="text-[10px] tracking-widest uppercase text-[#3D3730]">
+                      <div className="text-[10px] tracking-widest uppercase text-[#AFA79A]">
                         {t.role}
                       </div>
                     </div>
                     {active === i && (
                       <motion.span
-                        className="ml-auto w-1.5 h-1.5 rounded-full bg-[#B8864E] mt-2 flex-shrink-0"
+                        className="ml-auto w-1.5 h-1.5 rounded-full bg-[#D6A85A] mt-2 flex-shrink-0"
                         layoutId="dot"
                         transition={{ duration: 0.3 }}
                       />

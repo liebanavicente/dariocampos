@@ -43,20 +43,22 @@ export default function Hero() {
         style={{ opacity }}
       >
         <div className="max-w-3xl">
+          {/* Eyebrow */}
           <motion.div
             className="flex items-center gap-5 mb-10"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            <span className="w-10 h-px bg-[#B8864E]" />
-            <span className="text-[#B8864E] text-xs tracking-[0.4em] uppercase">
+            <span className="w-10 h-px bg-[#D6A85A]" />
+            <span className="text-[#D6A85A] text-xs tracking-[0.4em] uppercase">
               Guitarra · Producción · Sonido
             </span>
           </motion.div>
 
+          {/* Title */}
           <motion.h1
-            className="font-serif text-[#EDE8DF] mb-8"
+            className="font-serif text-[#F5F1E8] mb-8"
             style={{
               fontFamily: "var(--font-playfair)",
               fontSize: "clamp(4.5rem,13vw,10rem)",
@@ -68,12 +70,12 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
             DARÍO
-            <span className="block text-[#B8864E]">CAMPOS</span>
+            <span className="block text-[#D6A85A]">CAMPOS</span>
           </motion.h1>
 
+          {/* Subtitle */}
           <motion.p
-            className="text-[#C4B89A] text-xl md:text-2xl font-light max-w-xl mb-14 leading-relaxed"
-            style={{ letterSpacing: "0.01em" }}
+            className="text-[#E7E0D2] text-xl md:text-2xl font-light max-w-xl mb-14 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.75 }}
@@ -81,6 +83,7 @@ export default function Hero() {
             Guitarra flamenca, producción musical y más de dos décadas dedicadas al arte del sonido.
           </motion.p>
 
+          {/* CTA Buttons */}
           <motion.div
             className="flex flex-wrap gap-5"
             initial={{ opacity: 0, y: 20 }}
@@ -89,31 +92,32 @@ export default function Hero() {
           >
             <button
               onClick={() => handleScroll("#trayectoria")}
-              className="group px-10 py-5 bg-[#B8864E] text-[#0C0A08] text-xs tracking-[0.25em] uppercase font-medium hover:bg-[#D4A86A] transition-all duration-300 flex items-center gap-4"
+              className="group px-10 py-5 bg-[#D6A85A] text-[#0C0A08] text-xs tracking-[0.25em] uppercase font-semibold hover:bg-[#F0C875] transition-all duration-300 flex items-center gap-4"
             >
               Ver trayectoria
               <span className="w-4 h-px bg-[#0C0A08] group-hover:w-8 transition-all duration-300 inline-block" />
             </button>
             <button
               onClick={() => handleScroll("#contacto")}
-              className="px-10 py-5 border border-[#EDE8DF]/25 text-[#EDE8DF] text-xs tracking-[0.25em] uppercase hover:border-[#B8864E] hover:text-[#B8864E] transition-all duration-300"
+              className="px-10 py-5 border border-[#F5F1E8]/60 text-[#F5F1E8] text-xs tracking-[0.25em] uppercase hover:border-[#D6A85A] hover:text-[#D6A85A] transition-all duration-300"
             >
               Contactar
             </button>
           </motion.div>
         </div>
 
+        {/* Scroll indicator */}
         <motion.div
           className="absolute bottom-12 right-10 flex flex-col items-center gap-3"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
         >
-          <span className="text-[#6B6358] text-[9px] tracking-[0.35em] uppercase rotate-90 mb-3">
+          <span className="text-[#AFA79A] text-[9px] tracking-[0.35em] uppercase rotate-90 mb-3">
             Scroll
           </span>
           <motion.div
-            className="w-px h-16 bg-gradient-to-b from-[#B8864E] to-transparent"
+            className="w-px h-16 bg-gradient-to-b from-[#D6A85A] to-transparent"
             animate={{ scaleY: [1, 0.3, 1] }}
             transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
           />

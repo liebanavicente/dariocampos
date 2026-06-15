@@ -38,14 +38,14 @@ export default function ProduccionSonido() {
         {/* Header */}
         <FadeIn>
           <div className="flex items-center gap-4 mb-8">
-            <span className="w-8 h-px bg-[#B8864E]" />
-            <span className="text-[#B8864E] text-xs tracking-[0.4em] uppercase">
+            <span className="w-8 h-px bg-[#D6A85A]" />
+            <span className="text-[#D6A85A] text-xs tracking-[0.4em] uppercase">
               Producción y sonido
             </span>
           </div>
           <div className="grid md:grid-cols-2 gap-10 items-end mb-20 md:mb-28">
             <h2
-              className="text-[#EDE8DF]"
+              className="text-[#F5F1E8]"
               style={{
                 fontFamily: "var(--font-playfair)",
                 fontSize: "clamp(2.5rem,5vw,4.5rem)",
@@ -54,9 +54,9 @@ export default function ProduccionSonido() {
             >
               El sonido
               <br />
-              <span className="text-[#B8864E] italic">como artesanía</span>
+              <span className="text-[#D6A85A] italic">como artesanía</span>
             </h2>
-            <p className="text-[#C4B89A] font-light max-w-md" style={{ lineHeight: 1.85 }}>
+            <p className="text-[#E7E0D2] font-light max-w-md" style={{ lineHeight: 1.85 }}>
               La producción musical no empieza en el estudio. Empieza en la escucha,
               en la comprensión del proyecto, en la confianza entre artista y productor.
             </p>
@@ -76,12 +76,12 @@ export default function ProduccionSonido() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#0F0D0A]/70 via-[#0F0D0A]/20 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
               <span
-                className="block text-[#B8864E] text-xs tracking-[0.4em] uppercase mb-2"
+                className="block text-[#D6A85A] text-xs tracking-[0.4em] uppercase mb-2"
               >
                 Panorama 1526
               </span>
               <span
-                className="text-[#EDE8DF]/70 text-sm font-light tracking-widest uppercase"
+                className="text-[#F5F1E8]/80 text-sm font-light tracking-widest uppercase"
               >
                 Alt Empordà · Catalunya
               </span>
@@ -93,16 +93,16 @@ export default function ProduccionSonido() {
         <div className="space-y-0">
           {servicios.map((s, i) => (
             <FadeIn key={s.num} delay={i * 0.08}>
-              <div className="group grid grid-cols-[72px_1fr] md:grid-cols-[96px_1fr] gap-8 md:gap-12 items-start py-12 md:py-16 border-b border-[#1A1714] hover:border-[#B8864E]/20 transition-colors duration-400 cursor-default">
+              <div className="group grid grid-cols-[72px_1fr] md:grid-cols-[96px_1fr] gap-8 md:gap-12 items-start py-12 md:py-16 border-b border-[#2A2520] hover:border-[#D6A85A]/25 transition-colors duration-400 cursor-default">
                 <span
-                  className="text-[#2A2520] text-3xl pt-1 group-hover:text-[#B8864E]/25 transition-colors duration-300"
+                  className="text-[#3D3730] text-3xl pt-1 group-hover:text-[#D6A85A]/30 transition-colors duration-300"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
                   {s.num}
                 </span>
                 <div className="max-w-2xl">
                   <h3
-                    className="text-[#EDE8DF] mb-5 group-hover:text-[#B8864E] transition-colors duration-300"
+                    className="text-[#F5F1E8] mb-5 group-hover:text-[#D6A85A] transition-colors duration-300"
                     style={{
                       fontFamily: "var(--font-playfair)",
                       fontSize: "clamp(1.25rem,2vw,1.6rem)",
@@ -110,7 +110,7 @@ export default function ProduccionSonido() {
                   >
                     {s.title}
                   </h3>
-                  <p className="text-[#6B6358] font-light" style={{ lineHeight: 1.85 }}>
+                  <p className="text-[#BEB7AA] font-light" style={{ lineHeight: 1.85 }}>
                     {s.description}
                   </p>
                 </div>
@@ -124,16 +124,16 @@ export default function ProduccionSonido() {
           <div className="mt-20 md:mt-28 pt-10 border-t border-[#2A2520] flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             <div>
               <span
-                className="block text-[#B8864E] text-sm tracking-[0.3em] uppercase mb-2"
+                className="block text-[#D6A85A] text-sm tracking-[0.3em] uppercase mb-2"
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
                 Panorama 1526
               </span>
-              <span className="text-[#3D3730] text-xs tracking-widest uppercase">
+              <span className="text-[#AFA79A] text-xs tracking-widest uppercase">
                 Alt Empordà · Catalunya
               </span>
             </div>
-            <p className="text-[#6B6358] text-sm font-light max-w-md" style={{ lineHeight: 1.85 }}>
+            <p className="text-[#BEB7AA] text-sm font-light max-w-md" style={{ lineHeight: 1.85 }}>
               Espacio de creación, grabación y exploración sonora donde se desarrollan
               los proyectos de producción de Darío Campos.
             </p>

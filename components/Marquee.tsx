@@ -25,7 +25,7 @@ export default function Marquee() {
   const doubled = [...items, ...items];
 
   return (
-    <div className="overflow-hidden py-8 border-y border-[#1A1714]/60 bg-[#0F0D0A]">
+    <div className="overflow-hidden py-8 border-y border-[#2A2520] bg-[#111009]">
       <motion.div
         className="flex gap-12 whitespace-nowrap"
         animate={{ x: ["0%", "-50%"] }}
@@ -35,7 +35,7 @@ export default function Marquee() {
           <span
             key={i}
             className={`text-[11px] tracking-[0.3em] uppercase shrink-0 ${
-              item === "✦" ? "text-[#B8864E]" : "text-[#2A2520]"
+              item === "✦" ? "text-[#D6A85A]" : "text-[#BEB7AA]"
             }`}
           >
             {item}

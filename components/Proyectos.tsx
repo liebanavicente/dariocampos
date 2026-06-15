@@ -7,26 +7,15 @@ import FadeIn from "./FadeIn";
 
 const categories = [
   "Todos",
-  "Flamenco tradicional",
   "Flamenco contemporáneo",
-  "Producciones",
-  "Colaboraciones",
   "Directo",
+  "Colaboraciones",
+  "Producciones",
 ];
 
 const projects = [
   {
     id: 1,
-    title: "Formas del silencio",
-    category: "Flamenco tradicional",
-    year: "2023",
-    description:
-      "Grabación en solo de guitarra. Un recorrido por las formas tradicionales del flamenco — soleá, seguiriya, bulería — desde una interpretación depurada y personal.",
-    role: "Composición · Guitarra · Producción",
-    image: null,
-  },
-  {
-    id: 2,
     title: "Tierra adentro",
     category: "Flamenco contemporáneo",
     year: "2022–2023",
@@ -36,44 +25,34 @@ const projects = [
     image: "/images/dario2.jpg",
   },
   {
-    id: 3,
+    id: 2,
     title: "Raíces · Festival Internacional",
     category: "Directo",
     year: "2019–presente",
     description:
       "Participación continuada en el festival, tanto como guitarrista solista como en acompañamiento a cantaores y bailaoras de referencia del panorama flamenco actual.",
     role: "Guitarra flamenca · Acompañamiento",
-    image: null,
+    image: "/images/dario4.jpg",
   },
   {
-    id: 4,
+    id: 3,
     title: "La voz del cante",
     category: "Colaboraciones",
     year: "2021",
     description:
       "Colaboración en el disco de un cantaor de referencia del flamenco contemporáneo. Guitarras, arreglos y producción ejecutiva.",
     role: "Guitarra · Arreglos · Producción",
-    image: null,
+    image: "/images/dario3.jpg",
   },
   {
-    id: 5,
+    id: 4,
     title: "Archivo sonoro del flamenco",
     category: "Producciones",
     year: "2020–presente",
     description:
       "Proyecto de documentación y producción de grabaciones de músicos de flamenco. Registro, preservación y difusión de repertorio tradicional y de autor.",
     role: "Producción · Técnico de sonido · Dirección",
-    image: null,
-  },
-  {
-    id: 6,
-    title: "Compás",
-    category: "Flamenco contemporáneo",
-    year: "2024",
-    description:
-      "Nuevo espectáculo de danza flamenca contemporánea. Músicas originales concebidas para el baile, grabadas en PANORAMA 1526.",
-    role: "Composición · Guitarra · Producción musical",
-    image: null,
+    image: "/images/dario5.jpg",
   },
 ];
 
@@ -90,12 +69,12 @@ export default function Proyectos() {
         {/* Header */}
         <FadeIn>
           <div className="flex items-center gap-4 mb-8">
-            <span className="w-8 h-px bg-[#B8864E]" />
-            <span className="text-[#B8864E] text-xs tracking-[0.4em] uppercase">Proyectos</span>
+            <span className="w-8 h-px bg-[#D6A85A]" />
+            <span className="text-[#D6A85A] text-xs tracking-[0.4em] uppercase">Proyectos</span>
           </div>
           <div className="grid md:grid-cols-2 gap-10 items-end mb-16 md:mb-20">
             <h2
-              className="text-[#EDE8DF]"
+              className="text-[#F5F1E8]"
               style={{
                 fontFamily: "var(--font-playfair)",
                 fontSize: "clamp(2.5rem,5vw,4.5rem)",
@@ -104,9 +83,9 @@ export default function Proyectos() {
             >
               Trabajo
               <br />
-              <span className="text-[#B8864E] italic">y memoria</span>
+              <span className="text-[#D6A85A] italic">y memoria</span>
             </h2>
-            <p className="text-[#C4B89A] font-light max-w-md" style={{ lineHeight: 1.85 }}>
+            <p className="text-[#E7E0D2] font-light max-w-md" style={{ lineHeight: 1.85 }}>
               Cada proyecto es una pregunta que solo puede responderse tocando.
               Un archivo en construcción permanente.
             </p>
@@ -122,8 +101,8 @@ export default function Proyectos() {
                 onClick={() => setActive(cat)}
                 className={`text-xs tracking-[0.2em] uppercase px-5 py-2.5 transition-all duration-300 ${
                   active === cat
-                    ? "bg-[#B8864E] text-[#0C0A08]"
-                    : "text-[#6B6358] hover:text-[#EDE8DF] border border-[#3D3730] hover:border-[#6B6358]"
+                    ? "bg-[#D6A85A] text-[#0C0A08] font-semibold"
+                    : "text-[#BEB7AA] hover:text-[#F5F1E8] border border-[#3D3730] hover:border-[#BEB7AA]"
                 }`}
               >
                 {cat}
@@ -168,10 +147,10 @@ export default function Proyectos() {
                     />
                     <div className="absolute inset-0 flex items-center justify-center">
                       <svg viewBox="0 0 80 80" className="w-12 h-12 opacity-10" fill="none">
-                        <circle cx="40" cy="40" r="35" stroke="#B8864E" strokeWidth="0.8" />
-                        <circle cx="40" cy="40" r="14" stroke="#B8864E" strokeWidth="0.8" />
+                        <circle cx="40" cy="40" r="35" stroke="#D6A85A" strokeWidth="0.8" />
+                        <circle cx="40" cy="40" r="14" stroke="#D6A85A" strokeWidth="0.8" />
                         {[0,1,2,3,4,5].map(idx => (
-                          <line key={idx} x1={37+idx*1.2} y1="5" x2={37+idx*1.2} y2="75" stroke="#B8864E" strokeWidth="0.3" />
+                          <line key={idx} x1={37+idx*1.2} y1="5" x2={37+idx*1.2} y2="75" stroke="#D6A85A" strokeWidth="0.3" />
                         ))}
                       </svg>
                     </div>
@@ -181,13 +160,13 @@ export default function Proyectos() {
                 {/* Content */}
                 <div className="p-8 md:p-10">
                   <div className="flex justify-between items-start mb-5">
-                    <span className="text-[#B8864E] text-xs tracking-[0.3em] uppercase">
+                    <span className="text-[#D6A85A] text-xs tracking-[0.3em] uppercase">
                       {project.category}
                     </span>
-                    <span className="text-[#3D3730] text-xs">{project.year}</span>
+                    <span className="text-[#AFA79A] text-xs">{project.year}</span>
                   </div>
                   <h3
-                    className="text-[#EDE8DF] mb-5 group-hover:text-[#B8864E] transition-colors duration-300"
+                    className="text-[#F5F1E8] mb-5 group-hover:text-[#D6A85A] transition-colors duration-300"
                     style={{
                       fontFamily: "var(--font-playfair)",
                       fontSize: "clamp(1.4rem,2.5vw,1.75rem)",
@@ -195,11 +174,11 @@ export default function Proyectos() {
                   >
                     {project.title}
                   </h3>
-                  <p className="text-[#6B6358] font-light mb-8" style={{ lineHeight: 1.85 }}>
+                  <p className="text-[#BEB7AA] font-light mb-8" style={{ lineHeight: 1.85 }}>
                     {project.description}
                   </p>
                   <div className="pt-5 border-t border-[#2A2520]">
-                    <span className="text-[10px] tracking-[0.2em] uppercase text-[#3D3730]">
+                    <span className="text-[10px] tracking-[0.2em] uppercase text-[#AFA79A]">
                       {project.role}
                     </span>
                   </div>

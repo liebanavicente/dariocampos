@@ -28,20 +28,20 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0C0A08]/50 to-transparent" />
             </div>
 
-            <div className="absolute -bottom-5 -right-5 w-full h-full border border-[#B8864E]/15 -z-10" />
+            <div className="absolute -bottom-5 -right-5 w-full h-full border border-[#D6A85A]/15 -z-10" />
 
-            {/* Stats floating card */}
-            <div className="absolute -bottom-10 -left-4 md:-left-6 bg-[#1A1714] border border-[#2A2520] p-7 md:p-9">
+            {/* Stats card */}
+            <div className="absolute -bottom-10 -left-4 md:-left-6 bg-[#1A1714] border border-[#3D3730] p-7 md:p-9">
               <div className="flex gap-10">
                 {stats.map((s) => (
                   <div key={s.label} className="text-center">
                     <div
-                      className="text-2xl md:text-3xl text-[#B8864E] mb-2"
+                      className="text-2xl md:text-3xl text-[#D6A85A] mb-2"
                       style={{ fontFamily: "var(--font-playfair)" }}
                     >
                       {s.number}
                     </div>
-                    <div className="text-[10px] tracking-[0.2em] uppercase text-[#6B6358]">
+                    <div className="text-[10px] tracking-[0.2em] uppercase text-[#AFA79A]">
                       {s.label}
                     </div>
                   </div>
@@ -53,14 +53,14 @@ export default function About() {
           {/* Text */}
           <FadeIn direction="right" delay={0.2} className="pt-16 lg:pt-4">
             <div className="flex items-center gap-4 mb-8">
-              <span className="w-8 h-px bg-[#B8864E]" />
-              <span className="text-[#B8864E] text-xs tracking-[0.4em] uppercase">
+              <span className="w-8 h-px bg-[#D6A85A]" />
+              <span className="text-[#D6A85A] text-xs tracking-[0.4em] uppercase">
                 Sobre Darío
               </span>
             </div>
 
             <h2
-              className="mb-12 text-[#EDE8DF]"
+              className="mb-12 text-[#F5F1E8]"
               style={{
                 fontFamily: "var(--font-playfair)",
                 fontSize: "clamp(2.5rem,5vw,4rem)",
@@ -68,12 +68,12 @@ export default function About() {
               }}
             >
               La guitarra
-              <span className="text-[#B8864E] italic"> como</span>
+              <span className="text-[#D6A85A] italic"> como</span>
               <br />
               forma de vida
             </h2>
 
-            <div className="space-y-8 text-[#C4B89A] font-light max-w-xl" style={{ lineHeight: 1.85 }}>
+            <div className="space-y-7 text-[#E7E0D2] font-light max-w-xl" style={{ lineHeight: 1.85 }}>
               <p>
                 Hay músicos que tocan la guitarra. Y hay músicos que viven dentro de ella.
                 Darío Campos pertenece a la segunda categoría.
@@ -108,7 +108,7 @@ export default function About() {
                 ].map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs tracking-[0.15em] uppercase px-4 py-2 border border-[#3D3730] text-[#6B6358] hover:border-[#B8864E] hover:text-[#B8864E] transition-colors duration-300 cursor-default"
+                    className="text-xs tracking-[0.15em] uppercase px-4 py-2 border border-[#3D3730] text-[#BEB7AA] hover:border-[#D6A85A] hover:text-[#D6A85A] transition-colors duration-300 cursor-default"
                   >
                     {tag}
                   </span>
